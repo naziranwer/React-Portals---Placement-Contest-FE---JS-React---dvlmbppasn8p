@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const PortalButton = ({ buttonClick }) => {
-  const portalRoot = document.getElementById('portal-button');
+  
 
-  return ReactDOM.createPortal(
-    <div>
+  return (
+    <div id='portal-button'>
       <button id="button" onClick={buttonClick}>
         Click
       </button>
-    </div>,
-    portalRoot
+    </div>
+    
   );
 };
 

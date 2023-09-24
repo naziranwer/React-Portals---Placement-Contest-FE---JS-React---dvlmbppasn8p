@@ -14,6 +14,7 @@ const App = () => {
 
   const handleButtonClick=()=>{
     setTextArea(inputValue);
+    setInputvalue("");
   }
 
 
