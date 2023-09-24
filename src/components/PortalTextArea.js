@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import  ReactDOM  from 'react-dom';
 
-const PortalTextArea = ({ value }) => {
-  
-
-  return (
-    <div id='portal-textarea'>
-      <textarea id="textarea" value={value}>{value}</textarea>
-    </div>
-    
-  );
-};
-
+//complete this function using portals
+const PortalTextArea=({val})=>{
+    return (
+        <div id="portal-textarea">
+            <textarea id="textarea" value={val}>{val}</textarea>
+        </div>
+    )
+}
 export default PortalTextArea;
