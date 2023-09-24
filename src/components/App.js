@@ -5,24 +5,18 @@ import PortalTextArea from './PortalTextArea.js';
 
 //complete the function 
 const App = () => {
-  const [inputValue,setInputvalue]= useState('');
-  const [textArea,setTextArea]=useState('');
 
-  
-
-  const handleButtonClick=()=>{
-    setTextArea(inputValue);
-    setInputvalue("");
-  }
-
-
+const [inp,setInp]=useState("");
+const [val,setValue]=useState("");
   return (
     
-    <div id="main">
-      <input id="input" value={inputValue} onChange={(e)=> setInputvalue(e.target.value)}></input><br/>
-      <PortalButton buttonclick={handleButtonClick} /><br/>
-      <PortalTextArea value={textArea}/>
-    </div>
+    // <div id="main">
+    <>
+      <input id="input" value={inp} onChange={e=>setInp(e.target.value)}></input><br/>
+      <PortalButton setValue={setValue} inp={inp} setInp={setInp} /><br/>
+      <PortalTextArea val={val}/>
+      </>
+    // </div>
   )
 }
 
