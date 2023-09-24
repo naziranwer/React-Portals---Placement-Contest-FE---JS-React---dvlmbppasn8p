@@ -8,9 +8,7 @@ const App = () => {
   const [inputValue,setInputvalue]= useState('');
   const [textArea,setTextArea]=useState('');
 
-  const handleInputChange=()=>{
-    setInputvalue(e.target.value);
-  }
+  
 
   const handleButtonClick=()=>{
     setTextArea(inputValue);
@@ -21,7 +19,7 @@ const App = () => {
   return (
     
     <div id="main">
-      <input id="input" value={inputValue} onChange={handleInputChange}></input><br/>
+      <input id="input" value={inputValue} onChange={(e)=> setInputvalue(e.target.value)}></input><br/>
       <PortalButton buttonclick={handleButtonClick} /><br/>
       <PortalTextArea value={textArea}/>
     </div>
